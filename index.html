@@ -216,83 +216,70 @@
 				<section>
 					<section><h2>Sintaksa grafov</h2></section>
 					<section>slovnica</section>
-					<section class="syntax-sequence">
-						<div class="syntax-row">
-						<div class="syntax-step">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
-							<g data-id="outer-cut" data-auto-animate-target="229">
-								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
-								<g data-id="nested-A" data-auto-animate-target="230">
-									<text class="atom" x="400" y="280">
-										<tspan dy="0" x="440">A</tspan>
-									</text>
-								</g>
-								<g data-id="inner-cut" data-auto-animate-target="231">
-									<g data-id="nested-B" data-auto-animate-target="234">
-										<text class="atom" x="540" y="280">
-											<tspan dy="0" x="530">B</tspan>
-										</text>
-										<ellipse rx="50" ry="45" cx="530" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
-									</g>
-								</g>
-							</g>
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
+
+							<defs>
+								<marker id='head' orient="auto"
+									markerWidth='3' markerHeight='4'
+									refX='0.1' refY='2'>
+									<path d='M0,0 V4 L2,2 Z' fill="black"/>
+								</marker>
+							</defs>
+
+							<!-- original graph -->
+							<ellipse rx="180" ry="70" cx="240" cy="110" class="cut"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="340" cy="110" class="cut"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="200" cy="110" class="cut"></ellipse>
+							<text dy="120" dx="330">C</text>
+							<text dy="120" dx="90">B</text>
+							<text dy="120" dx="20">A</text>
+
+							<path
+								id='arrow-line'
+								marker-end='url(#head)'
+								stroke-width='6'
+								fill='none' stroke='black'  
+								d='M480,110, 550,110'
+							/>
+
+							<!-- transformed graph -->
+							<ellipse rx="160" ry="60" cx="820" cy="110" class="cut"></ellipse>
+							<text dy="120" dx="780">¬⊤</text>
+							<text dy="120" dx="910">¬C</text>
+							<text dy="120" dx="690">B</text>
+							<text dy="120" dx="600">A</text>
+
+							<path
+								id='arrow-line'
+								marker-end='url(#head)'
+								stroke-width='6'
+								fill='none' stroke='black'  
+								d='M620,180, 400,330'
+							/>
+
+							<!-- transformed graph -->
+							<ellipse rx="150" ry="70" cx="240" cy="410" class="cut"></ellipse>
+							<text dy="420" dx="30">A</text>
+							<text dy="420" dx="115">B ∧ ¬⊤ ∧ ¬C</text>
+
+							<path
+								id='arrow-line'
+								marker-end='url(#head)'
+								stroke-width='6'
+								fill='none' stroke='black'  
+								d='M460,410, 550,410'
+							/>
+
+							<!-- transformed graph -->
+							<text dy="420" dx="615">A ∧ ¬( B ∧ ¬⊤ ∧ ¬C )</text>
 						</svg>
-						</div>
-						<span class="syntax-arrow" aria-hidden="true">&rarr;</span>
-						<div class="syntax-step">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
-							<g data-id="outer-cut" data-auto-animate-target="229">
-								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
-								<g data-id="nested-A" data-auto-animate-target="230">
-									<text class="atom" x="440" y="280">
-										<tspan dy="0" x="440">A</tspan>
-									</text>
-								</g>
-								<g data-id="inner-cut" data-auto-animate-target="231">
-									<g data-id="nested-B" data-auto-animate-target="234">
-										<text class="atom" x="520" y="280">
-											<tspan dy="0" x="520">¬B</tspan>
-										</text>
-									</g>
-								</g>
-							</g>
-						</svg>
-						</div>
-						</div>
-						<div class="syntax-row">
-						<div class="syntax-step">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
-							<g data-id="outer-cut" data-auto-animate-target="229">
-								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
-								<g data-id="nested-A" data-auto-animate-target="230">
-									<text class="atom" x="400" y="280">
-										<tspan dy="0" x="500">A ∧ ¬B</tspan>
-									</text>
-								</g>
-							</g>
-						</svg>
-						</div>
-						<span class="syntax-arrow" aria-hidden="true">&rarr;</span>
-						<div class="syntax-step">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
-							<g data-id="outer-cut" data-auto-animate-target="229">
-								<g data-id="nested-A" data-auto-animate-target="230">
-									<text class="atom" x="400" y="280">
-										<tspan dy="0" x="500">¬( A ∧ ¬B )</tspan>
-									</text>
-								</g>
-							</g>
-						</svg>
-						</div>
-						</div>
 					</section>
-				</section>
 				</section>
 				<section>
 					<section><h2>Evaluacija grafov</h2></section>
 					<section>
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
-							kj
 						</svg>
 					</section>
 				</section>
