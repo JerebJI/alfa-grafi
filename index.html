@@ -126,8 +126,8 @@
     }
 
     .cut {
+	  stroke: black;
       fill: none;
-      stroke: currentColor;
       stroke-width: 5;
     }
 
@@ -176,6 +176,17 @@
 			font-size: 2rem;
 			line-height: 1;
 		}
+
+		.gray-cut {
+			fill: none;
+			stroke-width: 5;
+			stroke: #999 !important;
+		}
+
+		.gray-text {
+			stroke: #999 !important;
+			fill: #999 !important;
+		}
   </style>
 	</head>
 	<body>
@@ -218,6 +229,18 @@
 					<section>slovnica</section>
 					<section>
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
+							<!-- original graph -->
+							<ellipse rx="180" ry="70" cx="240" cy="110" class="cut"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="340" cy="110" class="cut"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="200" cy="110" class="cut"></ellipse>
+							<text dy="120" dx="330">C</text>
+							<text dy="120" dx="90">B</text>
+							<text dy="120" dx="20">A</text>
+						</svg>
+					</section>
+
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
 
 							<defs>
 								<marker id='head' orient="auto"
@@ -228,12 +251,16 @@
 							</defs>
 
 							<!-- original graph -->
-							<ellipse rx="180" ry="70" cx="240" cy="110" class="cut"></ellipse>
-							<ellipse rx="40"  ry="40"  cx="340" cy="110" class="cut"></ellipse>
-							<ellipse rx="40"  ry="40"  cx="200" cy="110" class="cut"></ellipse>
-							<text dy="120" dx="330">C</text>
-							<text dy="120" dx="90">B</text>
-							<text dy="120" dx="20">A</text>
+							<g class="gray-cut">
+								<ellipse rx="180" ry="70" cx="240" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="340" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="120" dx="330">C</text>
+								<text dy="120" dx="90">B</text>
+								<text dy="120" dx="20">A</text>
+							</g>
 
 							<path
 								id='arrow-line'
@@ -249,6 +276,54 @@
 							<text dy="120" dx="910">¬C</text>
 							<text dy="120" dx="690">B</text>
 							<text dy="120" dx="600">A</text>
+						</svg>
+					</section>
+
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
+
+							<defs>
+								<marker id='head' orient="auto"
+									markerWidth='3' markerHeight='4'
+									refX='0.1' refY='2'>
+									<path d='M0,0 V4 L2,2 Z' fill="black"/>
+								</marker>
+								<marker id='ghead' orient="auto"
+									markerWidth='3' markerHeight='4'
+									refX='0.1' refY='2'>
+									<path d='M0,0 V4 L2,2 Z' fill="gray"/>
+								</marker>
+							</defs>
+
+							<!-- original graph -->
+							<g class="gray-cut">
+								<ellipse rx="180" ry="70" cx="240" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="340" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="120" dx="330">C</text>
+								<text dy="120" dx="90">B</text>
+								<text dy="120" dx="20">A</text>
+
+								<path
+									id='arrow-line'
+									marker-end='url(#ghead)'
+									stroke-width='6'
+									d='M480,110, 550,110'
+								/>
+							</g>
+
+							<!-- transformed graph -->
+							<g class="gray-cut">
+								<ellipse rx="160" ry="60" cx="820" cy="110"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="120" dx="780">¬⊤</text>
+								<text dy="120" dx="910">¬C</text>
+								<text dy="120" dx="690">B</text>
+								<text dy="120" dx="600">A</text>
+							</g>
 
 							<path
 								id='arrow-line'
@@ -262,6 +337,72 @@
 							<ellipse rx="150" ry="70" cx="240" cy="410" class="cut"></ellipse>
 							<text dy="420" dx="30">A</text>
 							<text dy="420" dx="115">B ∧ ¬⊤ ∧ ¬C</text>
+						</svg>
+					</section>
+
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
+
+							<defs>
+								<marker id='head' orient="auto"
+									markerWidth='3' markerHeight='4'
+									refX='0.1' refY='2'>
+									<path d='M0,0 V4 L2,2 Z' fill="black"/>
+								</marker>
+								<marker id='ghead' orient="auto"
+									markerWidth='3' markerHeight='4'
+									refX='0.1' refY='2'>
+									<path d='M0,0 V4 L2,2 Z' fill="gray"/>
+								</marker>
+							</defs>
+
+							<!-- original graph -->
+							 <g class="gray-cut">
+								<ellipse rx="180" ry="70" cx="240" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="340" cy="110"></ellipse>
+								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="120" dx="330">C</text>
+								<text dy="120" dx="90">B</text>
+								<text dy="120" dx="20">A</text>
+
+								<path
+									id='arrow-line'
+									marker-end='url(#ghead)'
+									stroke-width='6'
+									fill='none' stroke='gray'  
+									d='M480,110, 550,110'
+								/>
+							</g>
+
+							<!-- transformed graph -->
+							<g class="gray-cut">
+								<ellipse rx="160" ry="60" cx="820" cy="110"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="120" dx="780">¬⊤</text>
+								<text dy="120" dx="910">¬C</text>
+								<text dy="120" dx="690">B</text>
+								<text dy="120" dx="600">A</text>
+							</g>
+
+							<path
+								id='arrow-line'
+								marker-end='url(#ghead)'
+								stroke-width='6'
+								fill='none' stroke='gray'  
+								d='M620,180, 400,330'
+							/>
+
+							<!-- transformed graph -->
+							<g class="gray-cut">
+								<ellipse rx="150" ry="70" cx="240" cy="410"></ellipse>
+							</g>
+							<g class="gray-text">
+								<text dy="420" dx="30">A</text>
+								<text dy="420" dx="115">B ∧ ¬⊤ ∧ ¬C</text>
+							</g>
 
 							<path
 								id='arrow-line'
