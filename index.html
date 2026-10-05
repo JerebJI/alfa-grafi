@@ -7,20 +7,350 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 
-		<title>reveal.js</title>
+		<title>Alfa grafi in logične uganke</title>
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+		<link rel="stylesheet" href="dist/theme/white.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+		<style>
+    /* EMAIL THEME OVERRIDES */
+    .email {
+      background: #fff;
+      color: #222;
+      text-align: left;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 40px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .email-header {
+      font-size: 0.75em;
+      color: #555;
+      line-height: 1.3em;
+    }
+
+    .email-subject {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .email-body {
+      margin-top: 20px;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    .email-footer {
+      margin-top: 30px;
+      font-size: 0.75em;
+      color: #777;
+    }
+
+    .inbox-label {
+      display: inline-block;
+      background: #d93025;
+      color: white;
+      padding: 2px 7px;
+      border-radius: 12px;
+      font-size: 0.65em;
+      margin-bottom: 8px;
+    }
+
+    .thread {
+      margin-top: 15px;
+      padding-left: 12px;
+      border-left: 3px solid #ddd;
+      color: #444;
+      font-size: 0.9em;
+    }
+
+    .timestamp {
+      font-size: 0.7em;
+      color: #888;
+      float: right;
+    }
+
+	/* .reveal .controls {
+		color: #7302d5; 
+	}
+
+	.reveal .progress span {
+		background-color: #7302d5;
+	} */.eg {
+      width: 1000px;
+      height: 560px;
+      margin: auto;
+    }
+
+    .eg svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .atom {
+      font-family: system-ui, sans-serif;
+      font-size: 42px;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+
+    .symbol {
+      font-family: serif;
+      font-size: 52px;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+
+    .negation {
+      font-family: serif;
+      font-size: 68px;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+
+    .paren {
+      font-family: serif;
+      font-size: 62px;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+
+    .cut {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 5;
+    }
+
+    .caption {
+      font-size: 0.62em;
+      opacity: 0.65;
+    }
+
+		.reveal .slides section.syntax-sequence {
+			display: flex !important;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 0;
+			width: 100%;
+			height: 55vh;
+		}
+
+		.syntax-row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0;
+			width: 100%;
+			flex: 1 1 0;
+			min-height: 0;
+		}
+
+		.syntax-step {
+			flex: 0 1 48%;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			min-width: 0;
+		}
+
+		.syntax-step svg {
+			display: block;
+			width: 100%;
+			height: auto;
+			 max-height: 100%;
+		}
+
+		.syntax-arrow {
+			flex: 0 0 auto;
+			font-size: 2rem;
+			line-height: 1;
+		}
+  </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Alfa grafi in logične uganke</h1>
+					<p>Janez Ignacij Jereb</p>
+				</section>
+				<section>
+					<section>
+						<div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
+							<img src="media/Charles_Sanders_Peirce.jpg"
+							alt="Charles Sanders Peirce"
+							style="width: 300px;">
+							<h2 style="text-align: left;">
+								<span style="display: block;">Charles</span>
+								<span style="display: block;">Sanders</span>
+								<span style="display: block;">Peirce</span>
+							</h2>
+						</div>
+					</section>
+					<section>
+						<img src="media/peirce_manuscript.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section><h2>Sklepanje z diagrami</h2></section>
+					<section>
+						<img src="media/Detailed_petri_net.png" alt="">
+						<img src="media/Zx-diagram-example.svg" alt="">
+						<img src="media/BPMN-AProcessWithNormalFlow.svg" alt="">
+					</section>
+					<section>
+						<img src="media/euler_graph_reasoning.png">
+					</section>
+				</section>
+				<section>
+					<section><h2>Sintaksa grafov</h2></section>
+					<section>slovnica</section>
+					<section class="syntax-sequence">
+						<div class="syntax-row">
+						<div class="syntax-step">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
+							<g data-id="outer-cut" data-auto-animate-target="229">
+								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
+								<g data-id="nested-A" data-auto-animate-target="230">
+									<text class="atom" x="400" y="280">
+										<tspan dy="0" x="440">A</tspan>
+									</text>
+								</g>
+								<g data-id="inner-cut" data-auto-animate-target="231">
+									<g data-id="nested-B" data-auto-animate-target="234">
+										<text class="atom" x="540" y="280">
+											<tspan dy="0" x="530">B</tspan>
+										</text>
+										<ellipse rx="50" ry="45" cx="530" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
+									</g>
+								</g>
+							</g>
+						</svg>
+						</div>
+						<span class="syntax-arrow" aria-hidden="true">&rarr;</span>
+						<div class="syntax-step">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
+							<g data-id="outer-cut" data-auto-animate-target="229">
+								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
+								<g data-id="nested-A" data-auto-animate-target="230">
+									<text class="atom" x="440" y="280">
+										<tspan dy="0" x="440">A</tspan>
+									</text>
+								</g>
+								<g data-id="inner-cut" data-auto-animate-target="231">
+									<g data-id="nested-B" data-auto-animate-target="234">
+										<text class="atom" x="520" y="280">
+											<tspan dy="0" x="520">¬B</tspan>
+										</text>
+									</g>
+								</g>
+							</g>
+						</svg>
+						</div>
+						</div>
+						<div class="syntax-row">
+						<div class="syntax-step">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
+							<g data-id="outer-cut" data-auto-animate-target="229">
+								<ellipse rx="100" ry="80" cx="500" cy="280" class="cut" data-auto-animate-target="unmatched"></ellipse>
+								<g data-id="nested-A" data-auto-animate-target="230">
+									<text class="atom" x="400" y="280">
+										<tspan dy="0" x="500">A ∧ ¬B</tspan>
+									</text>
+								</g>
+							</g>
+						</svg>
+						</div>
+						<span class="syntax-arrow" aria-hidden="true">&rarr;</span>
+						<div class="syntax-step">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 550 550">
+							<g data-id="outer-cut" data-auto-animate-target="229">
+								<g data-id="nested-A" data-auto-animate-target="230">
+									<text class="atom" x="400" y="280">
+										<tspan dy="0" x="500">¬( A ∧ ¬B )</tspan>
+									</text>
+								</g>
+							</g>
+						</svg>
+						</div>
+						</div>
+					</section>
+				</section>
+				</section>
+				<section>
+					<section><h2>Evaluacija grafov</h2></section>
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+							kj
+						</svg>
+					</section>
+				</section>
+				<section>
+					<section><h2>Pravila sklepanja</h2></section>
+					<section>
+						<br>
+						<h3>Odstranjevanje in dodajanje dvojne negacije</h3>
+						<br>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+							<ellipse rx="100" ry="100" cx="210" cy="110" class="cut"></ellipse>
+							<ellipse rx="60"  ry="60"  cx="210" cy="110" class="cut"></ellipse>
+							<text dy="110" dx="195">...</text>
+							<text dy="120" dx="380">↔</text>
+							<text dy="120" dx="500">...</text>
+						</svg>
+					</section>
+					<section>
+						<br>	
+						<h3>Vnašanje in odstranjevanje negacije v notranji rez</h3>
+						<br>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 900">
+							<text dy="125" x="10">A</text>
+							<ellipse rx="150" ry="100" cx="210" cy="110" class="cut"></ellipse>
+							<ellipse rx="90" ry="60"  cx="235" cy="110" class="cut"></ellipse>
+							<text dy="120" dx="90">...</text>
+							<text dy="120" dx="160">...</text>
+
+							<text dy="120" x="410">↔</text>
+
+							<text dy="125" dx="510">A</text>
+							<ellipse rx="150" ry="100" cx="700" cy="110" class="cut"></ellipse>
+							<ellipse rx="90" ry="60" cx="725" cy="110" class="cut"></ellipse>
+							<text dy="120" dx="590">...</text>
+							<text dy="120" dx="650">...</text>
+							<text dy="120" dx="720">A</text>
+						</svg>
+					</section>
+					<section>
+						<br>
+						<h3>Odstranjevanje in dodajanje trditev</h3>
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+							<text dy="70" dx="230">na sodi globini:</text>
+							<text dy="120" dx="300">... →</text>
+							<text dy="200" dx="230">na lihi globini:</text>
+							<text dy="250" dx="340">→ ...</text>
+						</svg>
+					</section>
+				</section>
+				<section>
+					<section><h2>Vitezi in oprode</h2></section>
+					<section data-background-iframe="https://rairlab.github.io/Peirce-My-Heart/"></section>
+				</section>
+				<section>
+					By <a href="//commons.wikimedia.org/w/index.php?title=User:Mikelo_Skarabo&amp;action=edit&amp;redlink=1" class="new" title="User:Mikelo Skarabo (page does not exist)">Mikelo Skarabo</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=91302590">Link</a>
+					<a href="https://commons.wikimedia.org/wiki/File:Detailed_petri_net.png">No machine-readable author provided. Msoos assumed (based on copyright claims).</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
+					By <a href="//commons.wikimedia.org/w/index.php?title=User:Johnie102&amp;action=edit&amp;redlink=1" class="new" title="User:Johnie102 (page does not exist)">Johnie102</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=78967681">Link</a>
+				</section>
 			</div>
 		</div>
 
