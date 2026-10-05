@@ -11,129 +11,24 @@
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/white.css" />
+		<link rel="stylesheet" href="dist/theme/beige.css" />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
 
 		<style>
-    /* EMAIL THEME OVERRIDES */
-    .email {
-      background: #fff;
-      color: #222;
-      text-align: left;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 40px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .email-header {
-      font-size: 0.75em;
-      color: #555;
-      line-height: 1.3em;
-    }
-
-    .email-subject {
-      font-size: 1.1em;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .email-body {
-      margin-top: 20px;
-      font-size: 0.95em;
-      line-height: 1.5em;
-    }
-
-    .email-footer {
-      margin-top: 30px;
-      font-size: 0.75em;
-      color: #777;
-    }
-
-    .inbox-label {
-      display: inline-block;
-      background: #d93025;
-      color: white;
-      padding: 2px 7px;
-      border-radius: 12px;
-      font-size: 0.65em;
-      margin-bottom: 8px;
-    }
-
-    .thread {
-      margin-top: 15px;
-      padding-left: 12px;
-      border-left: 3px solid #ddd;
-      color: #444;
-      font-size: 0.9em;
-    }
-
-    .timestamp {
-      font-size: 0.7em;
-      color: #888;
-      float: right;
-    }
-
 	/* .reveal .controls {
 		color: #7302d5; 
 	}
 
 	.reveal .progress span {
 		background-color: #7302d5;
-	} */.eg {
-      width: 1000px;
-      height: 560px;
-      margin: auto;
-    }
-
-    .eg svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    .atom {
-      font-family: system-ui, sans-serif;
-      font-size: 42px;
-      dominant-baseline: middle;
-      text-anchor: middle;
-    }
-
-    .symbol {
-      font-family: serif;
-      font-size: 52px;
-      dominant-baseline: middle;
-      text-anchor: middle;
-    }
-
-    .negation {
-      font-family: serif;
-      font-size: 68px;
-      dominant-baseline: middle;
-      text-anchor: middle;
-    }
-
-    .paren {
-      font-family: serif;
-      font-size: 62px;
-      dominant-baseline: middle;
-      text-anchor: middle;
-    }
+	} */
 
     .cut {
 	  stroke: black;
       fill: none;
       stroke-width: 5;
-    }
-
-    .caption {
-      font-size: 0.62em;
-      opacity: 0.65;
     }
 
 		.reveal .slides section.syntax-sequence {
@@ -180,16 +75,38 @@
 		.gray-cut {
 			fill: none;
 			stroke-width: 5;
-			stroke: #999 !important;
+			stroke: #95804c !important;
+			opacity: 0.55;
 		}
 
 		.gray-text {
-			stroke: #999 !important;
-			fill: #999 !important;
+			stroke: #95804c !important;
+			fill: #95804c !important;
+			opacity: 0.55;
 		}
+
+		.gray-arrow {
+			stroke: #95804c;
+			opacity: 0.55;
+		}
+
+		.gray-arrowhead {
+			fill: #95804c !important;
+		}
+
   </style>
 	</head>
 	<body>
+		<svg aria-hidden="true" width="0" height="0" style="position: absolute">
+			<defs>
+				<marker id="head" orient="auto" markerWidth="3" markerHeight="4" refX="0.1" refY="2">
+					<path d="M0,0 V4 L2,2 Z" fill="black" />
+				</marker>
+				<marker id="ghead" orient="auto" markerWidth="3" markerHeight="4" refX="0.1" refY="2">
+					<path class="gray-arrowhead" d="M0,0 V4 L2,2 Z" />
+				</marker>
+			</defs>
+		</svg>
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -197,11 +114,33 @@
 					<p>Janez Ignacij Jereb</p>
 				</section>
 				<section>
+					<section><h2>Sklepanje z diagrami</h2></section>
+					<section>
+						<img src="media/Detailed_petri_net.png" alt=""
+							style="
+							    filter: sepia(25%) saturate(70%) hue-rotate(350deg) brightness(96%);
+								opacity: 0.85;
+							">
+						<img src="media/Zx-diagram-example.svg" alt="">
+						<img src="media/BPMN-AProcessWithNormalFlow.svg" alt="">
+					</section>
+					<section>
+						<img src="media/euler_graph_reasoning.png" style="
+							    filter: sepia(25%) saturate(70%) hue-rotate(350deg) brightness(96%);
+								opacity: 0.85;
+							">
+					</section>
+				</section>
+
+				<section>
 					<section>
 						<div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
 							<img src="media/Charles_Sanders_Peirce.jpg"
 							alt="Charles Sanders Peirce"
-							style="width: 300px;">
+							style="width: 300px;
+							    filter: sepia(25%) saturate(70%) hue-rotate(350deg) brightness(96%);
+								opacity: 0.85;
+							">
 							<h2 style="text-align: left;">
 								<span style="display: block;">Charles</span>
 								<span style="display: block;">Sanders</span>
@@ -210,46 +149,69 @@
 						</div>
 					</section>
 					<section>
-						<img src="media/peirce_manuscript.png" alt="">
+						<img
+							src="media/peirce_manuscript.png"
+							alt=""
+							style="
+							    filter: sepia(25%) saturate(70%) hue-rotate(350deg) brightness(96%);
+								opacity: 0.85;
+							"
+						>
 					</section>
 				</section>
+
 				<section>
-					<section><h2>Sklepanje z diagrami</h2></section>
-					<section>
-						<img src="media/Detailed_petri_net.png" alt="">
-						<img src="media/Zx-diagram-example.svg" alt="">
-						<img src="media/BPMN-AProcessWithNormalFlow.svg" alt="">
+					<section><h2>Zgradba alfa grafov</h2></section>
+					<section data-transition="none">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 500">
+							<text dy="120" dx="160">A</text>
+						</svg>
 					</section>
-					<section>
-						<img src="media/euler_graph_reasoning.png">
+					<section data-transition="none">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 500">
+							<text dy="120" dx="160">A</text>
+							<text dy="120" dx="290">B</text>
+						</svg>
+					</section>
+					<section data-transition="none">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 500">
+							<text dy="120" dx="160">A</text>
+							<text dy="120" dx="290">B</text>
+							<ellipse rx="130" ry="70" cx="240" cy="110" class="cut"></ellipse>
+						</svg>
+					</section>
+					<section data-transition="none">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 500">
+							<text dy="120" dx="160">A</text>
+							<text dy="120" dx="290">B</text>
+							<ellipse rx="130" ry="70" cx="240" cy="110" class="cut"></ellipse>
+							<ellipse rx="100"  ry="150"  cx="500" cy="240" class="cut"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="500"  cy="290" class="cut"></ellipse>
+							<text dy="180" dx="480">C</text>
+							<text dy="280" dx="300">Č</text>
+							<ellipse rx="50" ry="50" cx="150" cy="280" class="cut"></ellipse>
+							<ellipse rx="80" ry="80" cx="150" cy="280" class="cut"></ellipse>
+							<text dy="290" dx="140">D</text>
+						</svg>
 					</section>
 				</section>
+
 				<section>
-					<section><h2>Sintaksa grafov</h2></section>
-					<section>slovnica</section>
-					<section>
+					<section data-transition="none"><h2>Pretvorba alfa grafov</h2></section>
+					<section data-transition="none">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
 							<!-- original graph -->
-							<ellipse rx="180" ry="70" cx="240" cy="110" class="cut"></ellipse>
-							<ellipse rx="40"  ry="40"  cx="340" cy="110" class="cut"></ellipse>
-							<ellipse rx="40"  ry="40"  cx="200" cy="110" class="cut"></ellipse>
-							<text dy="120" dx="330">C</text>
-							<text dy="120" dx="90">B</text>
-							<text dy="120" dx="20">A</text>
+							<ellipse rx="180" ry="70" cx="240" cy="110" class="cut black-part"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="340" cy="110" class="cut black-part"></ellipse>
+							<ellipse rx="40"  ry="40"  cx="200" cy="110" class="cut black-part"></ellipse>
+							<text dy="125" dx="325" class="black-part">C</text>
+							<text dy="125" dx="90" class="black-part">B</text>
+							<text dy="125" dx="20" class="black-part">A</text>
 						</svg>
 					</section>
 
-					<section>
+					<section data-transition="none">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
-
-							<defs>
-								<marker id='head' orient="auto"
-									markerWidth='3' markerHeight='4'
-									refX='0.1' refY='2'>
-									<path d='M0,0 V4 L2,2 Z' fill="black"/>
-								</marker>
-							</defs>
-
 							<!-- original graph -->
 							<g class="gray-cut">
 								<ellipse rx="180" ry="70" cx="240" cy="110"></ellipse>
@@ -257,13 +219,14 @@
 								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
 							</g>
 							<g class="gray-text">
-								<text dy="120" dx="330">C</text>
-								<text dy="120" dx="90">B</text>
-								<text dy="120" dx="20">A</text>
+								<text dy="125" dx="325">C</text>
+								<text dy="125" dx="90">B</text>
+								<text dy="125" dx="20">A</text>
 							</g>
 
 							<path
 								id='arrow-line'
+								class='black-part'
 								marker-end='url(#head)'
 								stroke-width='6'
 								fill='none' stroke='black'  
@@ -271,29 +234,16 @@
 							/>
 
 							<!-- transformed graph -->
-							<ellipse rx="160" ry="60" cx="820" cy="110" class="cut"></ellipse>
-							<text dy="120" dx="780">¬⊤</text>
-							<text dy="120" dx="910">¬C</text>
-							<text dy="120" dx="690">B</text>
-							<text dy="120" dx="600">A</text>
+							<ellipse rx="160" ry="70" cx="820" cy="110" class="cut black-part"></ellipse>
+							<text dy="125" dx="780" class="black-part">¬⊤</text>
+							<text dy="125" dx="890" class="black-part">¬C</text>
+							<text dy="125" dx="710" class="black-part">B</text>
+							<text dy="125" dx="600" class="black-part">A</text>
 						</svg>
 					</section>
 
-					<section>
+					<section data-transition="none">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
-
-							<defs>
-								<marker id='head' orient="auto"
-									markerWidth='3' markerHeight='4'
-									refX='0.1' refY='2'>
-									<path d='M0,0 V4 L2,2 Z' fill="black"/>
-								</marker>
-								<marker id='ghead' orient="auto"
-									markerWidth='3' markerHeight='4'
-									refX='0.1' refY='2'>
-									<path d='M0,0 V4 L2,2 Z' fill="gray"/>
-								</marker>
-							</defs>
 
 							<!-- original graph -->
 							<g class="gray-cut">
@@ -302,9 +252,9 @@
 								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
 							</g>
 							<g class="gray-text">
-								<text dy="120" dx="330">C</text>
-								<text dy="120" dx="90">B</text>
-								<text dy="120" dx="20">A</text>
+								<text dy="125" dx="325">C</text>
+								<text dy="125" dx="90">B</text>
+								<text dy="125" dx="20">A</text>
 
 								<path
 									id='arrow-line'
@@ -316,17 +266,18 @@
 
 							<!-- transformed graph -->
 							<g class="gray-cut">
-								<ellipse rx="160" ry="60" cx="820" cy="110"></ellipse>
+								<ellipse rx="160" ry="70" cx="820" cy="110"></ellipse>
 							</g>
 							<g class="gray-text">
-								<text dy="120" dx="780">¬⊤</text>
-								<text dy="120" dx="910">¬C</text>
-								<text dy="120" dx="690">B</text>
-								<text dy="120" dx="600">A</text>
+								<text dy="125" dx="780">¬⊤</text>
+								<text dy="125" dx="890">¬C</text>
+								<text dy="125" dx="710">B</text>
+								<text dy="125" dx="600">A</text>
 							</g>
 
 							<path
 								id='arrow-line'
+								class='black-part'
 								marker-end='url(#head)'
 								stroke-width='6'
 								fill='none' stroke='black'  
@@ -334,27 +285,14 @@
 							/>
 
 							<!-- transformed graph -->
-							<ellipse rx="150" ry="70" cx="240" cy="410" class="cut"></ellipse>
-							<text dy="420" dx="30">A</text>
-							<text dy="420" dx="115">B ∧ ¬⊤ ∧ ¬C</text>
+							<ellipse rx="170" ry="70" cx="250" cy="410" class="cut black-part"></ellipse>
+							<text dy="420" dx="30" class="black-part">A</text>
+							<text dy="420" dx="115" class="black-part">B ∧ ¬⊤ ∧ ¬C</text>
 						</svg>
 					</section>
 
-					<section>
+					<section data-transition="none">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 500">
-
-							<defs>
-								<marker id='head' orient="auto"
-									markerWidth='3' markerHeight='4'
-									refX='0.1' refY='2'>
-									<path d='M0,0 V4 L2,2 Z' fill="black"/>
-								</marker>
-								<marker id='ghead' orient="auto"
-									markerWidth='3' markerHeight='4'
-									refX='0.1' refY='2'>
-									<path d='M0,0 V4 L2,2 Z' fill="gray"/>
-								</marker>
-							</defs>
 
 							<!-- original graph -->
 							 <g class="gray-cut">
@@ -363,41 +301,43 @@
 								<ellipse rx="40"  ry="40"  cx="200" cy="110"></ellipse>
 							</g>
 							<g class="gray-text">
-								<text dy="120" dx="330">C</text>
-								<text dy="120" dx="90">B</text>
-								<text dy="120" dx="20">A</text>
-
-								<path
-									id='arrow-line'
-									marker-end='url(#ghead)'
-									stroke-width='6'
-									fill='none' stroke='gray'  
-									d='M480,110, 550,110'
-								/>
+								<text dy="125" dx="325">C</text>
+								<text dy="125" dx="90">B</text>
+								<text dy="125" dx="20">A</text>
 							</g>
+
+							<path
+								id='arrow-line'
+								class='gray-arrow'
+								marker-end='url(#ghead)'
+								stroke-width='6'
+								fill='none' stroke='#95804c'
+								d='M480,110, 550,110'
+							/>
 
 							<!-- transformed graph -->
 							<g class="gray-cut">
-								<ellipse rx="160" ry="60" cx="820" cy="110"></ellipse>
+								<ellipse rx="160" ry="70" cx="820" cy="110"></ellipse>
 							</g>
 							<g class="gray-text">
 								<text dy="120" dx="780">¬⊤</text>
-								<text dy="120" dx="910">¬C</text>
-								<text dy="120" dx="690">B</text>
+								<text dy="120" dx="890">¬C</text>
+								<text dy="120" dx="710">B</text>
 								<text dy="120" dx="600">A</text>
 							</g>
 
 							<path
 								id='arrow-line'
+								class='gray-arrow'
 								marker-end='url(#ghead)'
 								stroke-width='6'
-								fill='none' stroke='gray'  
+								fill='none' stroke='#95804c'
 								d='M620,180, 400,330'
 							/>
 
 							<!-- transformed graph -->
 							<g class="gray-cut">
-								<ellipse rx="150" ry="70" cx="240" cy="410"></ellipse>
+								<ellipse rx="170" ry="70" cx="250" cy="410"></ellipse>
 							</g>
 							<g class="gray-text">
 								<text dy="420" dx="30">A</text>
@@ -406,6 +346,7 @@
 
 							<path
 								id='arrow-line'
+								class='black-part'
 								marker-end='url(#head)'
 								stroke-width='6'
 								fill='none' stroke='black'  
@@ -413,14 +354,89 @@
 							/>
 
 							<!-- transformed graph -->
-							<text dy="420" dx="615">A ∧ ¬( B ∧ ¬⊤ ∧ ¬C )</text>
+							<text dy="420" dx="615" class="black-part">A ∧ ¬( B ∧ ¬⊤ ∧ ¬C )</text>
 						</svg>
 					</section>
 				</section>
 				<section>
-					<section><h2>Evaluacija grafov</h2></section>
-					<section>
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700">
+					<section data-transition="none"><h2>Poenostavljanje grafov</h2></section>
+					<section data-transition="none">
+						\[A=\top,\:\:\: B=\bot,\:\:\: C=\top\]
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 700">
+							<text dy="120" dx="185">A</text>
+							<text dy="120" dx="280">B</text>
+							<ellipse rx="130" ry="60" cx="240" cy="110" class="cut"></ellipse>
+							<ellipse rx="130" ry="60" cx="240" cy="250" class="cut"></ellipse>
+							<ellipse rx="30"  ry="30"  cx="200"  cy="250" class="cut"></ellipse>
+							<text dy="265" dx="280">C</text>
+					</section>
+					<section data-transition="none">
+						\[A=\top,\:\:\: B=\bot,\:\:\: C=\top\]
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 700">
+							<g class="gray-text">
+								<text dy="120" dx="185">A</text>
+								<text dy="120" dx="280">B</text>
+								<text dy="265" dx="280">C</text>
+							</g>
+							<g class="gray-cut">
+								<ellipse rx="130" ry="60" cx="240" cy="110"></ellipse>
+								<ellipse rx="130" ry="60" cx="240" cy="250"></ellipse>
+								<ellipse rx="30"  ry="30"  cx="200"  cy="250"></ellipse>
+							</g>
+
+							<path
+								id='arrow-line'
+								class='black-part'
+								marker-end='url(#head)'
+								stroke-width='6'
+								fill='none' stroke='black'
+								d='M380,180, 480,180'
+							/>
+
+							<ellipse rx="30"  ry="30"  cx="690"  cy="110" class="cut"></ellipse>
+							<ellipse rx="130" ry="60" cx="640" cy="110" class="cut"></ellipse>
+							<ellipse rx="130" ry="60" cx="640" cy="250" class="cut"></ellipse>
+							<ellipse rx="30"  ry="30"  cx="600"  cy="250" class="cut"></ellipse>
+						</svg>
+					</section>
+					<section data-transition="none">
+						\[A=\top,\:\:\: B=\bot,\:\:\: C=\top\]
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 700">
+							<g class="gray-text">
+								<text dy="120" dx="185">A</text>
+								<text dy="120" dx="280">B</text>
+								<text dy="265" dx="280">C</text>
+							</g>
+							<g class="gray-cut">
+								<ellipse rx="130" ry="60" cx="240" cy="110"></ellipse>
+								<ellipse rx="130" ry="60" cx="240" cy="250"></ellipse>
+								<ellipse rx="30"  ry="30"  cx="200"  cy="250"></ellipse>
+							</g>
+
+							<path
+								id='arrow-line'
+								class='gray-arrow'
+								marker-end='url(#ghead)'
+								stroke-width='6'
+								fill='none'   
+								d='M380,180, 480,180'
+							/>
+
+							<g class="gray-cut">
+								<ellipse rx="30"  ry="30"  cx="690"  cy="110"></ellipse>
+								<ellipse rx="130" ry="60" cx="640" cy="110"></ellipse>
+								<ellipse rx="130" ry="60" cx="640" cy="250"></ellipse>
+								<ellipse rx="30"  ry="30"  cx="600"  cy="250"></ellipse>
+							</g>
+
+							<path
+								id='arrow-line'
+								class='black-part'
+								marker-end='url(#head)'
+								stroke-width='6'
+								fill='none' stroke='black'
+								d='M790,180, 860,180'
+							/>
 						</svg>
 					</section>
 				</section>
@@ -470,14 +486,317 @@
 						</svg>
 					</section>
 				</section>
+
 				<section>
-					<section><h2>Vitezi in oprode</h2></section>
+					<section><h2>Primer: tranzitivnost konjunkcije</h2></section>
+					<section>
+						<ul class="logic-columns">
+							<li><b>Disjunkcija</b> <br> <span class="ellipse"><span class="ellipse">A</span> <span class="ellipse">B</span></span></li>
+							<li><b>Implikacija</b> <br> <span class="ellipse">A <span class="ellipse">B</span></span></li>
+						</ul>
+					</section>
+					<section>
+						Želimo dokazati, da če velja:
+						\[A\Rightarrow B\] \[B\Rightarrow C\] potem velja \[A\Rightarrow C\]
+					</section>
+					<section>
+						Želimo dokazati, da če velja: <br>
+						<div class="ellipse">A<div class="ellipse">B</div></div>
+						<div class="ellipse">B<div class="ellipse">C</div></div><br>
+						potem velja <br>
+						<div class="ellipse">A<div class="ellipse">C</div></div>
+					</section>
+					<section>
+						Želimo dokazati: <br>
+						<div class="ellipse">
+							<br>
+							&nbsp;&nbsp;&nbsp;
+							<div class="ellipse">A<div class="ellipse">B</div></div>
+							<div class="ellipse">B<div class="ellipse">C</div></div>
+							&nbsp;&nbsp;&nbsp;<br>
+							<div class="ellipse">
+								<div class="ellipse">A<div class="ellipse">C</div></div>
+							</div>
+							<br> &nbsp;
+						</div>
+					</section>
 					<section data-background-iframe="https://rairlab.github.io/Peirce-My-Heart/"></section>
 				</section>
+
 				<section>
-					By <a href="//commons.wikimedia.org/w/index.php?title=User:Mikelo_Skarabo&amp;action=edit&amp;redlink=1" class="new" title="User:Mikelo Skarabo (page does not exist)">Mikelo Skarabo</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=91302590">Link</a>
-					<a href="https://commons.wikimedia.org/wiki/File:Detailed_petri_net.png">No machine-readable author provided. Msoos assumed (based on copyright claims).</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons
-					By <a href="//commons.wikimedia.org/w/index.php?title=User:Johnie102&amp;action=edit&amp;redlink=1" class="new" title="User:Johnie102 (page does not exist)">Johnie102</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=78967681">Link</a>
+					<section><h2>Vitezi in oprode</h2></section>
+					<section>
+						<p style="text-align: left;">
+							Nekje v oceanu obstaja otok, <br>
+							na katerem živijo prebivalci dveh vrst:
+						</p>
+						<ul>
+							<li><b>vitezi</b>, ki vedno govorijo <b>resnico</b></li>
+							<li><b>oprode</b>, ki vedno govorijo <b>neresnico</b></li>
+						</ul>
+					</section>
+					<section>
+						<p style="text-align: left;">
+							V naslednjih nalogah bomo imeli 3 domačine, ki jih označujemo z A, B, C.
+						</p> <br>
+						<p style="text-align: left;">
+							Prva dva med njimi bosta dala eno izjavo.
+						</p>
+					</section>
+					<section>
+						<p style="text-align: left;">Izjavi otočanov: <br></p>
+						<ul>
+							<li><b>A</b>: &nbsp; C je oproda &nbsp; <b>ali</b> &nbsp; B je oproda.</li>
+							<li><b>B</b>: &nbsp; C je vitez &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>in</b> &nbsp; A je vitez.</li>
+						</ul> <br> <br>
+						<p style="text-align: left;">
+							Kateri prebivalec je vitez in kateri je oproda?
+						</p>
+					</section>
+					<style>
+						.ellipse {
+							display: inline-block;
+							border: 2px solid #333;
+							border-radius: 50%;
+							padding: 10px;
+							margin: 3px;
+						}
+
+						.reveal .slides section ul.logic-columns {
+							display: grid;
+							grid-template-columns: repeat(2, minmax(0, 1fr));
+							gap: 2rem;
+							width: 80%;
+							margin: 0 auto;
+							padding: 0;
+							justify-items: center;
+							text-align: center;
+						}
+
+						.transformation-pair {
+							display: grid;
+							grid-template-columns: 1fr;
+							align-items: center;
+							gap: 1rem;
+							width: 90%;
+							margin: 0 auto;
+						}
+
+						.formulation {
+							min-width: 0;
+							text-align: center;
+						}
+
+						.transformation-arrow {
+							font-size: 2rem;
+							line-height: 1;
+							text-align: center;
+						}
+					</style>
+					<section>
+						<p>
+							Pretvorimo izjavi otočanov v alfa grafe. <br> <br>
+							<u>A</u> &nbsp; ... &nbsp; predstavlja trditev, da je otočan A vitez
+						</p>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: C je oproda ali B je oproda.</li>
+									<li><b>B</b>: C je vitez in A je vitez.</li>
+								</ul>
+							</div>
+							<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <u class="ellipse">C</u> ali <u class="ellipse">B</u></li>
+									<li><b>B</b>: <u>C</u> in <u>A</u></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <u class="ellipse">C</u> ali <u class="ellipse">B</u></li>
+									<li><b>B</b>: <u>C</u> in <u>A</u></li>
+								</ul>
+							</div>
+							<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <span class="ellipse"><span class="ellipse"><span class="ellipse"><u>C</u></span></span> <span class="ellipse"><span class="ellipse"><u>B</u></span></span></span></li>
+									<li><b>B</b>: <u>C</u> <u>A</u></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <span class="ellipse"><span class="ellipse"><span class="ellipse"><u>C</u></span></span> <span class="ellipse"><span class="ellipse"><u>B</u></span></span></span></li>
+									<li><b>B</b>: <u>C</u> <u>A</u></li>
+								</ul>
+							</div>
+							<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <span class="ellipse"><u>C</u> <u>B</u></span></li>
+									<li><b>B</b>: <u>C</u> <u>A</u></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li><b>A</b>: <span class="ellipse"><u>C</u> <u>B</u></span></li>
+									<li><b>B</b>: <u>C</u> <u>A</u></li>
+								</ul>
+							</div>
+							<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> <span class="ellipse"><div class="ellipse"><u>C</u>&nbsp; &nbsp; <u>B</u></div></span></span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>B</u></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>B</u>&nbsp;<span class="ellipse"><u>C</u>&nbsp;<u>A</u></span></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> <span class="ellipse"><div class="ellipse"><u>C</u>&nbsp; &nbsp; <u>B</u></div></span></span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>B</u></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>B</u>&nbsp;<span class="ellipse"><u>C</u>&nbsp;<u>A</u></span></span>
+									</li>
+								</ul>
+							</div>
+							<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> &nbsp;<u>C</u>&nbsp; <u>B</u>&nbsp;</span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u>&nbsp;<u>A</u></span></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> &nbsp;<u>C</u>&nbsp; <u>B</u>&nbsp;</span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u>&nbsp;<u>A</u></span></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<span class="transformation-arrow" aria-hidden="true">&darr;</span>
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> &nbsp;<u>C</u>&nbsp; <u>B</u>&nbsp;</span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u></span></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> <u>A</u> &nbsp;<u>C</u>&nbsp; <u>B</u>&nbsp;</span>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp; <span class="ellipse"></span>&nbsp;<u>C</u> <u>A</u></span>
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u></span></span>
+									</li>
+								</ul>
+							</div>
+						</div> <br>
+						<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u><span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u></span></span></span> <div class="ellipse"><u>C</u> <u>B</u></div></span> →
+						<span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u><span class="ellipse"><span class="ellipse"><u>C</u></span></span></span> <div class="ellipse"><u>C</u> <u>B</u></div></span> → <br>
+						→ <span class="ellipse"> &nbsp; <span class="ellipse"><u>A</u> <u>C</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span> →
+						<span class="ellipse"><span class="ellipse"><u>C</u></span> <div class="ellipse"><u>C</u></div></span> →
+						<span class="ellipse"><span class="ellipse"><u>C</u></span></span> →
+						<u>C</u>
+					</section>
+					<section data-transition="none">
+						<div class="transformation-pair">
+							<div class="formulation">
+								<ul>
+									<li>
+										<u>C</u>
+									</li>
+									<li>
+										<span class="ellipse"> &nbsp;<span class="ellipse"><u>A</u></span> <div class="ellipse"><u>C</u> <u>B</u></div></span>
+										<span class="ellipse"> &nbsp;<u>A</u> &nbsp;<u>C</u>&nbsp; <u>B</u>&nbsp;</span>
+										→ 
+										<span class="ellipse"><span class="ellipse"><u>A</u></span><div class="ellipse"><u>B</u></div></span>
+										<span class="ellipse"> &nbsp;<u>A</u>&nbsp; <u>B</u>&nbsp;</span>
+									</li>
+									<li>
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"><u>C</u></span></span>
+										→ 
+										<span class="ellipse">&nbsp;<u>A</u>&nbsp;<span class="ellipse"></span></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section><h1>Hvala za pozornost!</h1></section>
+					<section>
+						<ul>
+							<li>Petrijeva mreža od <a href="https://commons.wikimedia.org/wiki/File:Detailed_petri_net.png">Msoos predpostavljen</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, preko Wikimedia Commons
+							<a href="https://commons.wikimedia.org/wiki/File:Detailed_petri_net.png">Msoos predpostavljen.</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, preko Wikimedia Commons</li>
+							<li>ZX vezje od <a href="//commons.wikimedia.org/w/index.php?title=User:Johnie102&amp;action=edit&amp;redlink=1" class="new" title="User:Johnie102 (page does not exist)">Johnie102</a> - <span class="int-own-work" lang="en">Lastno delo</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=78967681">Povezava</a></li>
+							<li>BPMN diagram od <a href="https://commons.wikimedia.org/wiki/File:BPMN-AProcessWithNormalFlow.svg">Mikelo Skarabo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, preko Wikimedia Commons</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>Slika Charles Sanders Peirce-a od <a href="https://commons.wikimedia.org/wiki/File:Charles_Sanders_Peirce.jpg">Napoleon Sarony</a>, Public domain, preko Wikimedia Commons</li>
+							<li>Slika rokopisa vzeta iz <a href="https://fromthepage.com/jeffdown1/c-s-peirce-manuscripts/ms-455-456-1903-lowell-lecture-ii/display/13630">From the page</a></li>
+							<li>Slika dokaza z uporabo Eulerjevih diagramov: Burton, James, Gem Stapleton, and John Howse. "Completeness proof strategies for Euler diagram logics." Euler Diagrams 2012: Proceedings of the 3rd International Workshop on Euler Diagrams. CEUR-WS, 2012.</li>
+						</ul>
+					</section>
 				</section>
 			</div>
 		</div>
@@ -486,15 +805,16 @@
 		<script src="dist/plugin/notes.js"></script>
 		<script src="dist/plugin/markdown.js"></script>
 		<script src="dist/plugin/highlight.js"></script>
+		<script src="dist/plugin/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				transitionSpeed: "fast",
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX],
 			});
 		</script>
 	</body>
